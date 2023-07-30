@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="check-circle.png" type="image/x-icon" />
     <title>Yapılacaklar Listesi</title>
+  </head>
 
-</head>
+  <body>
 
-<body>
-    
+    <div class="notify">
+      <span> Lütfen Tüm Alanları Doldurunuz! </span>
+    </div>
+  </div>
 
-    <details>
-        <summary>Nasıl Kullanılır?</summary>
-        <h3 id="tek">Tek Tık:  <small>Tamamlandı</small></h3>
-        <h3 id="cift">Çift Tık: <small> Tamamlanmadı </small></h3>
-        <h3 id="ctrl">CTRL + Tek Tık:  <small>Devam Ediyor</small> </h3>
-    </details>
+  <div class="notifySuccess">
+    <span> Görev Eklendi! Silmek İçin Üzerine Çift Tıklayın. </span>
+  </div>
+</div>
 
     <div class="container">
-        
-        <h1 class="baslik"> Yapılacaklar Listesi: </h1>
+      
+      <h1 class="baslik">Yapılacaklar Listesi:</h1>
 
-            <input type="text" id="inputText" placeholder="Yeni Bir Görev Girin" required="required" autofocus>
-            <input type="date" id="inputDate" required="required">
-            <input type="button" id="addToDo" value="Ekle">
-            <input type="button" id="clearToDo" value="Sil">
-
-    </div>
-
-    <div class="to-dos" id="toDoContainer">
-    </div>
-
-<script src="app.js"></script>
     
+      <input type="text" id="inputText" placeholder="Yeni Bir Görev Girin" required="required" autofocus/>
+      <input type="text" onfocus="(this.type='date')" id="inputDate" required="required" placeholder="Tarih Girin" />
+      <input type="button" id="addToDo" value="Ekle" />
+      <input type="button" id="clearToDo" value="Temizle" />
+
     
-    
-</body>
+    <table id="todoTable">
+      <tbody class="todos"></tbody>
+    </table>
+
+
+    <script src="app.js"></script>
+  </body>
 </html>
